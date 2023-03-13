@@ -1,0 +1,44 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Supprimer le dernier élément de la liste
+        
+        <ol id="suprimer">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+    </p>
+    <button type="button">Supprimer</button>
+
+
+    <script>
+    'use strict';
+
+/*Concevez la page -ci-dessous présentant une liste numérotée. A chaque clic sur le bouton, supprimez le dernier élément de la liste. Lorsque la liste est vide, affichez  un message d'erreur dans une boîte de dialogue ou rendez le bouton inopé*/
+
+    let liste = document.querySelector('ol');
+    let btn = document.querySelector('button');
+
+        btn.addEventListener('click' , () =>{       //document.addEventListener
+        liste.removeChild(liste.lastElementChild)
+        if (liste.children.length==0) {
+                btn.disabled = true;
+            };
+        });
+            
+    </script>
+    
+</body>
+</html>
